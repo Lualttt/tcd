@@ -80,7 +80,7 @@ func main() {
 			privateKeyFilePath := certPath + "privkey.pem"
 
 			//Open or Create privateKey is not exists
-			privateKeyFile, err := os.OpenFile(privateKeyFilePath, os.O_RDWR|os.O_CREATE, 0600)
+			privateKeyFile, err := os.OpenFile(privateKeyFilePath, os.O_RDWR|os.O_CREATE, 0644)
 			if err != nil {
 				fmt.Println("Failed to create privateKey file for ", certificate.Domain.Main, " :", err)
 				os.Exit(1)
